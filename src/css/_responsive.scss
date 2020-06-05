@@ -1,0 +1,114 @@
+$tablet: 768px;
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 768px) {
+  #root {
+    .block-mobile {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .container,
+  .container-sm {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 920px) {
+  .main-body
+    .right-container
+    .container
+    .player-container
+    .trackstat-container
+    .trackstat-item
+    .value {
+    font-size: 1.2rem;
+  }
+  .main-body .left-container .container .playlist-container .track-item,
+  .main-body .left-container .container .profile-container .track-item,
+  .main-body .right-container .container .playlist-container .track-item,
+  .main-body .right-container .container .profile-container .track-item {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1550px) {
+  .main-body
+    .left-container
+    .container
+    .search-container
+    .slick-slider
+    .slider-item
+    img.item-image,
+  .main-body
+    .left-container
+    .container
+    .search-container
+    .slick-slider
+    .slider-item
+    .no-img,
+  .main-body
+    .right-container
+    .container
+    .search-container
+    .slick-slider
+    .slider-item
+    img.item-image,
+  .main-body
+    .right-container
+    .container
+    .search-container
+    .slick-slider
+    .slider-item
+    .no-img {
+    width: 150px;
+    height: 150px;
+  }
+}
