@@ -17,9 +17,11 @@ let spotifyClientSecret;
 if (process.env.NODE_ENV !== 'production') {
   spotifyClientId = process.env.REACT_APP_CLIENT_ID;
   spotifyClientSecret = process.env.REACT_APP_CLIENT_SECRET;
+  redirectURI = 'http://localhost:3000/home';
 } else {
   spotifyClientId = process.env.REACT_APP_CLIENT_ID_PROD;
   spotifyClientSecret = process.env.REACT_APP_CLIENT_SECRET_PROD;
+  redirectURI = process.env.REACT_APP_REDIRECT_URI_PROD;
 }
 
 const AuthState = (props) => {
@@ -51,7 +53,7 @@ const AuthState = (props) => {
         const dataBody = {
           grant_type: 'authorization_code',
           code: accessCode,
-          redirect_uri: 'http://localhost:3000/home',
+          redirect_uri: redirectURI,
         };
 
         const res = await fetch('https://accounts.spotify.com/api/token', {
@@ -87,7 +89,7 @@ const AuthState = (props) => {
       const dataBody = {
         grant_type: 'refresh_token',
         refresh_token: localStorage.getItem('refreshToken'),
-        redirect_uri: 'http://localhost:3000/search',
+        redirect_uri: redirectURI,
       };
 
       const res = await fetch('https://accounts.spotify.com/api/token', {
