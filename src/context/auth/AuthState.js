@@ -18,8 +18,8 @@ if (process.env.NODE_ENV !== 'production') {
   spotifyClientId = process.env.REACT_APP_CLIENT_ID;
   spotifyClientSecret = process.env.REACT_APP_CLIENT_SECRET;
 } else {
-  spotifyClientId = process.env.SPOTIFY_CLIENT_ID;
-  spotifyClientSecret = process.env.SPOTIFY_CLIENT_SECRET;
+  spotifyClientId = process.env.REACT_APP_CLIENT_ID_PROD;
+  spotifyClientSecret = process.env.REACT_APP_CLIENT_SECRET_PROD;
 }
 
 const AuthState = (props) => {
