@@ -20,6 +20,7 @@ const App = () => {
           Woofer is not yet available in mobile devices
         </h1>
       </div>
+      {console.log(process.env)}
       <Navbar />
       <Switch>
         <Route exact path='/' component={Login} />
