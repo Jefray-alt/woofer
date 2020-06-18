@@ -17,7 +17,6 @@ const LoginExternal = (props) => {
         }
         const scopes =
           'user-read-private user-read-email user-library-read streaming user-follow-modify user-follow-read';
-        const redirectURI = 'http://localhost:3000/home';
         window.location = `https://accounts.spotify.com/authorize?response_type=code&client_id=${key}&scope=${encodeURIComponent(
           scopes
         )}&redirect_uri=${redirectURI}`;
