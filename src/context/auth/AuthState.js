@@ -13,6 +13,7 @@ import {
 
 let spotifyClientId;
 let spotifyClientSecret;
+let redirectURI;
 
 if (process.env.NODE_ENV !== 'production') {
   spotifyClientId = process.env.REACT_APP_CLIENT_ID;
